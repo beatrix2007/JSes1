@@ -9,7 +9,7 @@
         <span id="span1">C'è un bottone</span>
         <br><br>
         <button name="bottone" id="btn1">NON PREMERE QUESTO BOTTONE</button>
-        <div id="div1" style="background-color: rgba(139, 216, 16, 0.89);">
+        <div id="div1" style="background-color: red">
             <h2>NON PREMERE IL BOTTONE</h2>
             <p>Ti ho detto di non schiacciarlo</p>
         </div>
@@ -19,6 +19,14 @@
             console.log("span: ", span1);
             var testo= span1.innerHTML;
             console.log("testo: ", testo);
+            document.getElementById("span1").innerHTML="CUCU";
+            document.getElementById("div1").setAttribute("style", "background-color: blue")
+            var button= document.getElementById("btn1");
+            button.addEventListener("click", changeColor);
+
+            var changeColor = function(){
+                console.log("BUONGIORNISSIMO");
+            }
         </script>
    </body> 
 </html>
